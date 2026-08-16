@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,runs;
+    int Total=0;
+    int Boundaries=0;
+    int dots=0;
+    int valid=0;
+    float strikerate;
+    printf("Enter the number of balls: ");
+    scanf("%d", &n);
+    for(i=0; i<n; i++)
+    {
+        printf("runs on ball %d: ", i+1);
+        scanf("%d", &runs);
+        if(runs==0||runs==1||runs==2||runs==3||runs==4||runs==6)
+        {
+            Total+=runs;
+            valid++;
+            if(runs==4||runs==6)
+            {
+                Boundaries++;
+            }
+        }
+        else
+        {
+            dots++;
+        }}
+        strikerate = (float)Total*100/valid;
+        printf("Total runs: %d\n", Total);
+        printf("Boundaries: %d\n", Boundaries);
+        printf("Total dots: %d\n", dots);
+        printf("Strike rate: %.2f\n", strikerate);
+        return 0;
+        }
